@@ -7,7 +7,6 @@ EPSILON = 1e-08
 def swish(x):
     return x* torch.sigmoid(x)
 
-# 定义网络结构
 class MLPNet(torch.nn.Module):
     def __init__(self,dim,width,depth):
         super(MLPNet, self).__init__()
@@ -30,7 +29,6 @@ class MLPNet(torch.nn.Module):
         return y
 
 
-#初始化参数
 def init_weights(m):
     if isinstance(m, nn.Linear):
         torch.nn.init.xavier_normal_(m.weight)  
